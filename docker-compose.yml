@@ -2,7 +2,7 @@ version: "3"
 
 services:
     frontend:
-        image: nickstersz/frontendserver:frontend
+        image: mfon01/fronty
         container_name: frontendpage
         ports:
           - 3000:3000
@@ -10,7 +10,8 @@ services:
           - backend
 
     backend:
-        image: nickstersz/backendserver:backend
+        image: mfon01/backend:back
+
         container_name: backend
         command: python manage.py runserver 0.0.0.0:8005
         ports:
